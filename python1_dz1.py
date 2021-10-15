@@ -21,3 +21,6 @@ elif time // 60:
 else:
     second = time
     print(second, ' Second')
+
+
+    
