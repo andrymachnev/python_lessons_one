@@ -1,6 +1,26 @@
-time = int(input('Введите Duration: ')):
-day
-hours
-minutes
-second
-if time
+time = int(input('Введите Duration: '))
+day = 0
+hours = 0
+minutes = 0
+second = 0
+print(type(time))
+a = time // 86400
+print(a, type(a))
+if time // 86400:
+    day = time // 86400
+    hours = time % 86400 // 3600
+    minutes = time % 86400 % 3600 // 60
+    second = time % 86400 % 3600 % 60
+    print(day, 'Day', hours, 'Hours', minutes, 'Minutes', second, 'Second')
+elif time // 3600:
+    hours = time // 3600
+    minutes = time % 3600 // 60
+    second = time % 3600 % 60
+    print(hours, 'Hours', minutes, 'Minutes', second, 'Second')
+elif time // 60:
+    minutes = time // 60
+    second = time % 3600 % 60
+    print(minutes, 'Minutes', second, 'Second')
+else:
+    second = time
+    print(second, ' Second')
