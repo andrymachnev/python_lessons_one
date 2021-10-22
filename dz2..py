@@ -44,15 +44,13 @@
 #
 # positions = ['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА', 'токарь высшего разряда нИКОЛАЙ', 'директор аэлита']
 # print(type(positions), positions)
-# # print('Привет, ', positions.pop(0))
+# print('Привет, ', positions.pop(0))
 # pos_inj, pos_acc, pos_tur, pos_boss = positions[0].split(' ')[-1], positions[1].split(' ')[-1], positions[2].split(' ')[-1], positions[3].split(' ')[-1]
-# print(pos_inj, pos_acc, pos_tur, pos_boss)
-#
-# print('Привет,', pos_inj.capitalize(), '!')
-# print('Привет,', pos_acc.capitalize(), '!')
+# print('Привет,', pos_inj.capitalize(), '!', 'Привет,', pos_acc.capitalize(), '!', 'Привет,', pos_tur.capitalize(), '!', 'Привет,', pos_boss.capitalize(), '!', sep='\n')
+# print( 'Привет,', pos_acc.capitalize(), '!')
 # print('Привет,', pos_tur.capitalize(), '!')
 # print('Привет,', pos_boss.capitalize(), '!')
-#
+
 # димин код
 # task_list = ['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА', 'токарь высшего разряда нИКОЛАй',
 #                  'директор аэлита']
