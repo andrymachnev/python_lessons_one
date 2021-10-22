@@ -29,16 +29,16 @@
 # # экран фразы вида: 'Привет, Игорь!' Подумать, как получить имена сотрудников из элементов
 # # списка, как привести их к корректному виду. Можно ли при этом не создавать новый список?
 
-positions = ['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА', 'токарь высшего разряда нИКОЛАЙ', 'директор аэлита']
-print(type(positions), positions)
-# print('Привет, ', positions.pop(0))
-pos_inj, pos_acc, pos_tur, pos_boss = positions[0].split(' ')[-1], positions[1].split(' ')[-1], positions[2].split(' ')[-1], positions[3].split(' ')[-1]
-print(pos_inj, pos_acc, pos_tur, pos_boss)
-
-print('Привет,', pos_inj.capitalize(), '!')
-print('Привет,', pos_acc.capitalize(), '!')
-print('Привет,', pos_tur.capitalize(), '!')
-print('Привет,', pos_boss.capitalize(), '!')
+# positions = ['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА', 'токарь высшего разряда нИКОЛАЙ', 'директор аэлита']
+# print(type(positions), positions)
+# # print('Привет, ', positions.pop(0))
+# pos_inj, pos_acc, pos_tur, pos_boss = positions[0].split(' ')[-1], positions[1].split(' ')[-1], positions[2].split(' ')[-1], positions[3].split(' ')[-1]
+# print(pos_inj, pos_acc, pos_tur, pos_boss)
+#
+# print('Привет,', pos_inj.capitalize(), '!')
+# print('Привет,', pos_acc.capitalize(), '!')
+# print('Привет,', pos_tur.capitalize(), '!')
+# print('Привет,', pos_boss.capitalize(), '!')
 
 
 # Создать вручную список, содержащий цены на товары (10–20 товаров), например:
@@ -56,4 +56,20 @@ print('Привет,', pos_boss.capitalize(), '!')
 # D. Вывести цены пяти самых дорогих товаров. Сможете ли вывести цены этих товаров по
 # возрастанию, написав минимум кода?
 
-sp = [89.26, 58.64, 00.06, 00.70, 96.47, 65.14, 66.33, 74.25, 45.54, 69.32, 74.32, 33.33]
+price = [89.26, 58.64, 00.06, 00.70, 96.47, 65.14, 66.33, 74.25, 45.54, 69.32, 74.32, 33.33]
+price.sort()
+print(id(price), price)
+for i in price:
+    print(str(i).split('.')[0], "руб.", str(i).split('.')[1].ljust(2, "0"), "коп. ", end=' ')
+print(dir(price))
+price.reverse()
+for i in price:
+    print(str(i).split('.')[0], "руб.", str(i).split('.')[1].ljust(2, "0"), "коп. ", end=' ')
+print(id(price), type(price), price)
+print(dir(price))
+
+
+
+
+
+

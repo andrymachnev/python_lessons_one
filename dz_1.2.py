@@ -13,6 +13,7 @@ numbers = 0
 take = 0
 odd_numbers = list(range(1, 1000, 2))
 for i in odd_numbers:
+    print(i)
     odd = i ** 3 + 17
     final_list.append(odd)
     print(odd)
