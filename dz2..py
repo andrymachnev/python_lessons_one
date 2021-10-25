@@ -1,11 +1,12 @@
 # # '''тип результата выражений'''
+# задание №1
 # # a = 15 * 3
 # # b = 15 / 3
 # # c = 15 // 2
 # # d = 15 ** 2
 # # print(type(a), type(b), type(c), type(d))
 #
-#
+#задание №2
 # '''Дан список:
 # ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха',
 # 'была', '+5', 'градусов']
@@ -21,26 +22,52 @@
 # Примечание: если обособление чисел кавычками не будет получаться - можете вернуться к его
 # реализации позже. Главное: дополнить числа до двух разрядов нулём!'''
 #
+# task_list = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+5', 'градусов']
+# new_list = []
+# for i in task_list:
+#     if i.isdigit():
+#         new_list.extend(['"', i.zfill(2), '"'])
+#     elif i.startswith('+') or i.startswith('-'):
+#         new_list.extend(['"', i.zfill(3), '"'])
+#     else:
+#         new_list.append(i)
 #
+# print(" ".join(new_list))
+#
+#задание №4
 # # Дан список, содержащий искажённые данные с должностями и именами сотрудников:
 # # ['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА',
 # # 'токарь высшего разряда нИКОЛАй', 'директор аэлита']
 # # Известно, что имя сотрудника всегда в конце строки. Сформировать из этих имён и вывести на
 # # экран фразы вида: 'Привет, Игорь!' Подумать, как получить имена сотрудников из элементов
 # # списка, как привести их к корректному виду. Можно ли при этом не создавать новый список?
-
+#
 # positions = ['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА', 'токарь высшего разряда нИКОЛАЙ', 'директор аэлита']
 # print(type(positions), positions)
-# # print('Привет, ', positions.pop(0))
-# pos_inj, pos_acc, pos_tur, pos_boss = positions[0].split(' ')[-1],positions[1].split(' ')[-1], positions[2].split(' ')[-1], positions[3].split(' ')[-1]
-# print(pos_inj, pos_acc, pos_tur, pos_boss)
-#
-# print('Привет,', pos_inj.capitalize(), '!')
-# print('Привет,', pos_acc.capitalize(), '!')
+# print('Привет, ', positions.pop(0))
+# pos_inj, pos_acc, pos_tur, pos_boss = positions[0].split(' ')[-1], positions[1].split(' ')[-1], positions[2].split(' ')[-1], positions[3].split(' ')[-1]
+# print('Привет,', pos_inj.capitalize(), '!', 'Привет,', pos_acc.capitalize(), '!', 'Привет,', pos_tur.capitalize(), '!', 'Привет,', pos_boss.capitalize(), '!', sep='\n')
+# print( 'Привет,', pos_acc.capitalize(), '!')
 # print('Привет,', pos_tur.capitalize(), '!')
 # print('Привет,', pos_boss.capitalize(), '!')
 
-
+# димин код
+# task_list = ['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА', 'токарь высшего разряда нИКОЛАй',
+#                  'директор аэлита']
+# for i in task_list:
+#     print("Привет, ", i.split(" ")[-1].capitalize(), "!")
+#     сашин код
+# source_list = ['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА', 'токарь высшего разряда нИКОЛАй',
+#                    'директор аэлита']
+# another_list = []
+# for element in source_list:
+#     new_list = list(element.split(" "))
+#     for i in new_list:
+#         if i == new_list[-1]:
+#             another_list.append("Привет," + i.capitalize() + "!")
+#             print(another_list[-1])
+# #
+# # задание №5
 # Создать вручную список, содержащий цены на товары (10–20 товаров), например:
 # © geekbrains.ru
 # 19[57.8, 46.51, 97, ...]
@@ -56,11 +83,22 @@
 # D. Вывести цены пяти самых дорогих товаров. Сможете ли вывести цены этих товаров по
 # возрастанию, написав минимум кода?
 #
+# задание №5
 # price = [89.26, 58.64, 00.06, 00.70, 96.47, 65.14, 66.33, 74.25, 45.54, 69.32, 74.32, 33.33]
 # price.sort()
+# print(id(price), price)
 # for i in price:
-#     print(str(i.split('.')[0], "руб.", str(i).split('.')[1].ljust(2, "0"),"коп.", end='')
-# print(id(price), price)
-# print(id(price.sort), price)
+#     print(str(i).split('.')[0], "руб.", str(i).split('.')[1].ljust(2, "0"), "коп. ", end=' ')
+# print(dir(price))
 # price.reverse()
-# print(id(price), price)
+# for i in price:
+#     print(str(i).split('.')[0], "руб.", str(i).split('.')[1].ljust(2, "0"), "коп. ", end=' ')
+# print(id(price), type(price), price)
+# print(dir(price))
+
+
+
+
+
+
+
